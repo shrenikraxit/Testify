@@ -1,0 +1,82 @@
+<div class="container-fluid mt-4">
+    <h2>Upload Study Materials</h2>
+    <p>Use the tabs below to upload different types of study materials.</p>
+    <hr>
+
+    <!-- Tabs for Study Material Types -->
+    <ul class="nav nav-tabs" id="materialTabs" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="plain-text-tab" data-toggle="tab" href="#plain-text" role="tab"
+                aria-controls="plain-text" aria-selected="true">Plain Text</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="pdf-tab" data-toggle="tab" href="#pdf" role="tab" aria-controls="pdf"
+                aria-selected="false">PDF Upload</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="youtube-tab" data-toggle="tab" href="#youtube" role="tab" aria-controls="youtube"
+                aria-selected="false">YouTube Video</a>
+        </li>
+    </ul>
+
+    <!-- Tab Content Area -->
+    <div class="tab-content" id="materialTabContent">
+        <!-- Plain Text Tab -->
+        <div class="tab-pane fade show active" id="plain-text" role="tabpanel" aria-labelledby="plain-text-tab">
+            <div class="form-group">
+                <!-- Textbox for the title -->
+                <label for="plainTextTitle">Title:</label>
+                <input type="text" class="form-control" id="plainTextTitle" placeholder="Enter the title for your text">
+                <label for="plainTextTitle">Study Material:</label>
+                <textarea class="form-control" id="plainTextInput"
+                    placeholder="Write or paste the text here..."></textarea>
+                <small id="characterCount" class="character-count">0 characters</small>
+            </div>
+        </div>
+
+        <!-- PDF Upload Tab -->
+        <div class="tab-pane fade" id="pdf" role="tabpanel" aria-labelledby="pdf-tab">
+            <!-- Textbox for the title -->
+            <label for="plainTextTitle">Title:</label>
+            <input type="text" class="form-control" id="plainPDFTitle" placeholder="Enter the title for your text">
+            <div class="upload-area" id="pdfUploadArea" onclick="document.getElementById('pdfFileInput').click();">
+                <p id="uploadInstructions">Drag and drop a PDF file here, or click to select a file.</p>
+                <input type="file" id="pdfFileInput" accept="application/pdf" style="display: none;">
+                <!-- Preview area for the selected PDF file -->
+                <div id="pdfFilePreview" class="file-preview"></div>
+            </div>
+        </div>
+
+        <!-- YouTube Video Upload Tab -->
+        <div class="tab-pane fade" id="youtube" role="tabpanel" aria-labelledby="youtube-tab">
+            <div class="upload-area" id="youtubeUploadArea">
+                <input type="text" id="youtubeInput" class="form-control"
+                    placeholder="Paste or type a YouTube video link...">
+            </div>
+        </div>
+    </div>
+    <!-- Spinner wheel -->
+    <div id="spinner-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="spinner-animation">
+                <img src="../static/images/logo.png" alt="logo" id="spinner-logo">
+            </div>
+            <p id="loading-text">Uploading the study materials...</p>
+        </div>
+    </div>
+    <!-- Control Panel: Subject Dropdown, Topic Dropdown, and Add to Application Button -->
+    <div class="control-panel">
+        <!-- Subject Dropdown -->
+        <select class="form-control" id="subjectDropdown">
+            <option value="" disabled selected>Subject</option>
+        </select>
+
+        <!-- Topic Dropdown -->
+        <select class="form-control" id="topicDropdown" disabled>
+            <option value="" disabled selected>Topic</option>
+        </select>
+
+        <!-- Add to Application Button -->
+        <button class="btn btn-primary add-to-application-btn" id="addToApplicationBtn">Add to Library</button>
+    </div>
+</div>

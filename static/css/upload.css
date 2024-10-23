@@ -1,0 +1,146 @@
+/* Styling for the tabs */
+.nav-tabs .nav-link {
+    background-color: #e6f2ff;
+    color: black;
+    border: none;
+    margin-right: 5px;
+    border-radius: 4px 4px 0 0;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Tab content should take the full available space */
+.tab-content {
+    border: 1px solid #dee2e6;
+    border-top: none;
+    padding: 16px;
+    height: calc(100vh - 250px);
+    overflow-y: auto;
+}
+
+/* Full height for textarea, PDF upload area, and YouTube input */
+#plainTextInput {
+    min-height: 100px;
+    /* Set an initial minimum height */
+    overflow-y: hidden;
+    /* Hide the scrollbar */
+    resize: none;
+    /* Disable manual resizing */
+}
+
+.upload-area,
+#youtubeInput {
+    height: calc(100% - 40px);
+}
+
+/* Styling for PDF upload area */
+.upload-area {
+    border: 2px dashed #ccc;
+    border-radius: 4px;
+    text-align: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    height: 100%;
+}
+
+/* Styling for the PDF preview */
+.pdficon {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #c80707;
+    /* Color for the PDF icon */
+}
+
+/* Styling for the notes preview */
+.pdficon {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #007bff;
+    /* Color for the notes icon */
+}
+
+#pdfFilePreview {
+    margin-top: 10px;
+    color: #0c0c0c;
+    /* Color for the file font */
+}
+
+/* Control panel styling */
+.control-panel {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.control-panel select,
+.control-panel button {
+    flex: 1;
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width of the screen */
+    height: 100%;
+    /* Full height of the screen */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 30%;
+    /* Customize width of the modal content */
+    height: 30%;
+    /* Customize height of the modal content */
+    display: flex;
+    /* Flexbox to center logo inside the modal */
+    justify-content: center;
+    /* Center the logo horizontally */
+    align-items: center;
+    /* Center the logo vertically */
+}
+
+#loading-text {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    /* Make sure the text is black for visibility */
+}
+
+#spinner-logo {
+    width: 80px;
+    height: 80px;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+label {
+    margin-top: 10px;
+}

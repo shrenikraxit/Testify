@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/justgage@1.3.2/justgage.min.js"></script>
+    <link rel="stylesheet" href="../static/css/dashboard.css">
+</head>
+
+<body>
+    <div class="header-container">
+        <h1 class="dashboard-title">
+            <i class="fas fa-chart-bar"></i> Performance Analysis
+        </h1>
+    </div>
+    <div class="container-fluid">
+        <!-- Added align-items-start to align cards and charts at the top -->
+        <div class="row align-items-start">
+            <!-- Column 1: All four cards stacked vertically -->
+            <div class="col-md-4">
+                <!-- Average Score Card -->
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-main-info larger-font" id="averageScore">Loading...</p>
+                        <h5 class="card-subtle-info">Average Score</h5>
+                    </div>
+                </div>
+                <!-- Total Tests Card -->
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-main-info larger-font" id="totalTests">Loading...</p>
+                        <h5 class="card-subtle-info">Total Tests</h5>
+                    </div>
+                </div>
+                <!-- Best Subject Card -->
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-main-info smaller-font" id="bestSubject">Loading...</p>
+                        <h5 class="card-subtle-info">Best Subject</h5>
+                    </div>
+                </div>
+                <!-- Worst Subject Card -->
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-main-info smaller-font" id="worstSubject">Loading...</p>
+                        <h5 class="card-subtle-info">Worst Subject</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 2: Subject bar chart on top of topic bar chart -->
+            <div class="col-md-8">
+                <!-- Bar Chart for avgscore and tests by subject -->
+                <div class="chart-item">
+                    <canvas id="subjectBarChart"></canvas>
+                </div>
+                <!-- Bar Chart for avgscore and tests by topic -->
+                <div class="chart-item" id="topicChartContainer">
+                    <!-- The topic chart canvas will be created here dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../static/dashboard.js"></script>
+    <script src="../static/common.js"></script>
+</body>
+
+</html>

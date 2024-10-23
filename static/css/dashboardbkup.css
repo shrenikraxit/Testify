@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.chart-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.chart-item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    flex: 1 1 400px;
+    text-align: center;
+}
+
+.gauge-container {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+canvas {
+    max-width: 100%;
+}
+
+.card {
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    flex: 1;
+}
+
+.card {
+    /* Large font size for main info */
+    font-weight: bold;
+    color: #007bff;
+    /* Color for main info */
+}
+
+/* Styles for smaller font cards */
+.smaller-font {
+    font-size: 36px;
+    /* Smaller font size for first two cards */
+}
+
+/* Styles for larger font cards */
+.larger-font {
+    font-size: 56px;
+    /* Larger font size for next two cards */
+}
+
+.card .card-subtle-info {
+    font-size: 14px;
+    /* Smaller font size for the legend */
+    color: #6c757d;
+    /* Subtle gray color for the legend */
+    margin-top: 10px;
+    /* Space between the main info and the legend */
+}

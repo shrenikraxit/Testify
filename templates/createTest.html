@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Test</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/createTest.css">
+</head>
+
+<body>
+    <div id="createtest" class="container mt-5">
+        <h2 class="text-center">Create Your Test</h2>
+        <div class="form-group">
+            <label for="subjectDropdown">Select Subject</label>
+            <select class="form-control" id="subjectDropdown">
+                <option value="" disabled selected>Subject</option>
+                <!-- Subjects will be populated here dynamically -->
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="topicDropdown">Select Topic</label>
+            <select class="form-control" id="topicDropdown" disabled>
+                <option value="all" selected>All</option>
+                <!-- Topics will be populated here dynamically -->
+            </select>
+        </div>
+
+        <hr>
+
+        <h4>Select Test Type and Number of Questions</h4>
+
+        <div class="test-type-container">
+            <div class="test-type">
+                <input type="checkbox" id="trueFalseCheckbox" class="test-checkbox">
+                <label for="trueFalseCheckbox">True/False</label>
+                <input type="range" id="trueFalseSlider" class="form-control-range question-slider" min="1" max="10"
+                    value="1" disabled>
+                <span id="trueFalseValue" class="slider-value">1</span> Questions
+            </div>
+
+            <div class="test-type">
+                <input type="checkbox" id="multipleChoiceCheckbox" class="test-checkbox">
+                <label for="multipleChoiceCheckbox">Multiple Choice</label>
+                <input type="range" id="multipleChoiceSlider" class="form-control-range question-slider" min="1"
+                    max="10" value="1" disabled>
+                <span id="multipleChoiceValue" class="slider-value">1</span> Questions
+            </div>
+
+            <div class="test-type">
+                <input type="checkbox" id="writtenResponseCheckbox" class="test-checkbox">
+                <label for="writtenResponseCheckbox">Written Response</label>
+                <input type="range" id="writtenResponseSlider" class="form-control-range question-slider" min="1"
+                    max="5" value="1" disabled>
+                <span id="writtenResponseValue" class="slider-value">1</span> Questions
+            </div>
+        </div>
+
+        <!-- Generate Button -->
+        <button class="btn btn-primary float-right" id="generateTestBtn">Generate</button>
+        <!-- Spinner wheel -->
+        <div id="spinner-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <div class="spinner-animation">
+                    <img src="../static/images/logo.png" alt="logo" id="spinner-logo">
+                </div>
+                <p id="loading-text">Generating the test...</p>
+            </div>
+        </div>
+    </div>
+    <!----Write Test Section-->
+    <div id="writetest" class="container-fluid mt-4" style="display: none;">
+        <h2 class="text-center">Test Questions</h2>
+        <div id="test-header">
+            <!-- Test Info: Subject and Topic -->
+            <div id="testInfo" class="test-info">
+                <!-- Subject and Topic will be populated here -->
+            </div>
+            <!-- Result Info: Score and Max Score -->
+            <div id="result-container" style="display: none;">
+                <h4>Test Completed</h4>
+                <div id="result-summary"> </div>
+            </div>
+        </div>
+        <form id="testForm">
+            <div id="questionsContainer">
+                <!-- Questions will be dynamically inserted here -->
+            </div>
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary" id="submitbtn">Submit Test</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Bootstrap and jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="static/createTest.js"></script>
+</body>
+
+</html>

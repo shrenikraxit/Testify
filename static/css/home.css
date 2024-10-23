@@ -1,0 +1,139 @@
+/* Ensure the hero section fills the entire screen */
+.masthead {
+    height: 100vh;
+    /* Full viewport height */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-background {
+    /* Set the background image */
+    background-image: url('/static/images/heroimage.jpg');
+    background-size: cover;
+    /* Ensure the image covers the whole area */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Prevent the image from repeating */
+
+    /* Add a semi-transparent overlay */
+    background-color: rgba(67, 67, 67, 0.854);
+    /* Adjust the color and transparency (50% transparency here) */
+
+    /* Make sure the background image and color stack properly */
+    background-blend-mode: overlay;
+    /* Blend the image and color together */
+
+    /* Set height for the header */
+    height: 100vh;
+    /* Set the hero section to fill the viewport */
+}
+
+.intro-text {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.intro-lead-in {
+    font-size: 3vw;
+    /* Adjust the size based on viewport width */
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    color: #007bff;
+}
+
+.intro-text .intro-heading {
+    font-size: 6vw;
+    /* Make the main heading larger */
+    font-weight: 900;
+    /* Use the bold version for heading */
+    margin-top: 150px;
+}
+
+/* Button styling for the hero section */
+.intro-text .btn {
+    font-size: 1.5vw;
+    /* Size the button text relative to viewport */
+    padding: 1em 2em;
+    margin-top: 20px;
+    /* Add margin to move the button down */
+}
+
+/* Services section takes 75% of the screen height */
+.services-section {
+    height: auto;
+    /* Let the section adapt to its content */
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 50px 0 0;
+    /* Reduce bottom padding */
+    margin: 0;
+    /* Remove any unnecessary margins */
+}
+
+
+/* Footer section takes the remaining 25% */
+.footer-section {
+    height: 25vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-scroll {
+    color: white;
+    text-shadow:
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black;
+    /* Creates the white border around the text */
+    margin-top: 40px;
+}
+
+.study-text {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.subject-list {
+    height: 5rem;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.subject-list div {
+    display: flex;
+    flex-direction: column;
+    animation: scrollSubjects 10s linear infinite;
+}
+
+.subject-item {
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+@keyframes scrollSubjects {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-30rem);
+    }
+
+    /* Adjust for the number of subjects */
+}

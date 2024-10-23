@@ -1,0 +1,87 @@
+/* Sidebar styling */
+.sidebar {
+    border-right: 1px solid #ccc;
+    /* Add border to the sidebar */
+    padding: 0;
+    height: 100vh;
+    /* Full height of the viewport */
+    width: 200px;
+    /* Set a fixed width for the sidebar */
+    position: fixed;
+    /* Keep the sidebar fixed in place */
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Distribute items vertically */
+    background-color: #ffffff;
+    /* Add background color to avoid transparency */
+    z-index: 1000;
+    /* Ensure the sidebar stays above other elements */
+}
+
+/* Updated right content area */
+.content-container {
+    margin-left: 200px;
+    /* Push the main content to the right of the fixed sidebar */
+    padding: 20px;
+    background-color: #f2f0f04e;
+}
+
+/* Menu styles */
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.menu li {
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.menu li:hover {
+    background-color: #f1f1f1;
+}
+
+.menu li.active {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Branding and user info */
+.brand {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.brand img {
+    width: 100px;
+    height: 100px;
+}
+
+.brand h3 {
+    margin-top: 10px;
+}
+
+.user-info {
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+}
+
+.btn-signout {
+    margin-top: 10px;
+}
+
+.intro-lead-in {
+    font-size: 2vw;
+    /* Adjust the size based on viewport width */
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    color: #007bff;
+}

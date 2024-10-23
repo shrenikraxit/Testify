@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Application</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;display=swap">
+    <link href="static/css/index.css" rel="stylesheet">
+    <!-- Bootstrap and jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Left Sidebar Menu -->
+            <div class="sidebar">
+                <!-- Brand Logo and Name -->
+                <div class="brand">
+                    <img src="static/images/logo.png" alt="Brand Logo" />
+                    <div class="intro-lead-in"><span>Testify</span></div>
+                </div>
+
+                <!-- Menu Items -->
+                <ul class="menu">
+                    <li class="menu-item active" onclick="loadPage('/dashboard', this)">Dashboard</li>
+                    <li class="menu-item" onclick="loadPage('/library', this)">Library</li>
+                    <li class="menu-item" onclick="loadPage('/upload', this)">Upload</li>
+                    <li class="menu-item" onclick="loadPage('/createTest', this)">Create Test</li>
+                </ul>
+
+                <!-- User Information and Sign Out Button -->
+                <div class="user-info">
+                    <p>Welcome, <span id="user-name">{{ user_name }}</span></p>
+                    <a href="/logout">Logout</a>
+                </div>
+            </div>
+
+            <!-- Right Content Area -->
+            <div class="col">
+                <div id="content" class="content-container">
+                    <!-- Content will be loaded here dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../static/index.js"></script>
+</body>
+
+</html>

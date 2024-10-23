@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+
+<body>
+    <h1>Welcome to My App</h1>
+    {% if current_user.is_authenticated %}
+    <p>Hello, {{ current_user.username }}!</p>
+    <a href="/logout">Logout</a> | <a href="/account">Account</a>
+    {% else %}
+    <a href="/login">Login</a> | <a href="/register">Register</a>
+    {% endif %}
+</body>
+
+</html>

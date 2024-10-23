@@ -1,0 +1,221 @@
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width of the screen */
+    height: 100%;
+    /* Full height of the screen */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 30%;
+    /* Customize width of the modal content */
+    height: 30%;
+    /* Customize height of the modal content */
+    display: flex;
+    /* Flexbox to center logo inside the modal */
+    justify-content: center;
+    /* Center the logo horizontally */
+    align-items: center;
+    /* Center the logo vertically */
+}
+
+#loading-text {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    /* Make sure the text is black for visibility */
+}
+
+#spinner-logo {
+    width: 80px;
+    height: 80px;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+/* Styles for the create test section */
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 600px;
+}
+
+h2 {
+    margin-bottom: 30px;
+}
+
+.test-type-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.test-type {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.test-type label {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.question-slider {
+    width: 200px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.slider-value {
+    width: 50px;
+    text-align: center;
+}
+
+/* Position the button at the right bottom corner */
+.float-right {
+    float: right;
+    margin-top: 30px;
+}
+
+/* Styles for the write test section */
+.question-container {
+    margin-bottom: 20px;
+}
+
+
+/* Flexbox to position the question number and text */
+.question-row {
+    display: flex;
+    align-items: center;
+}
+
+.question-num {
+    font-weight: bold;
+    font-size: medium;
+    color: rgb(0, 0, 0);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    /* Black border */
+    border-radius: 50%;
+    /* Circle */
+    margin-right: 20px;
+    /* Spacing between number and question */
+    margin-bottom: 10px;
+    flex-shrink: 0;
+    /* Prevent shrinking */
+    box-sizing: border-box;
+    /* Ensure border doesn't affect width/height */
+    text-align: center;
+    /* Ensure number is centered */
+}
+
+.correct {
+    background-color: green;
+    font-weight: bold;
+    font-size: medium;
+    color: rgb(255, 255, 255);
+}
+
+.incorrect {
+    background-color: red;
+    font-weight: bold;
+    font-size: medium;
+    color: rgb(255, 255, 255);
+}
+
+.question-title {
+    font-weight: normal;
+    font-size: medium;
+    margin-bottom: 10px;
+}
+
+.question-content {
+    display: flex;
+    flex-direction: column;
+    /* Stack the title and options vertically */
+    border-left: 2px solid lightgrey;
+    /* Light grey left border */
+    padding-left: 10px;
+    /* Add some space inside the border */
+    margin-bottom: 20px;
+    /* Add space between questions */
+}
+
+
+.options-list {
+    margin-left: 20px;
+}
+
+.test-info {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.answer-row {
+    font-weight: normal;
+    font-size: medium;
+    color: rgb(255, 0, 0);
+}
+
+/*
+#testInfo {
+    float: left;
+}
+
+#result-container {
+    float: Right;
+}
+*/
+
+#test-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid rgb(232, 230, 230);
+    /* Light grey left border */
+}
+
+#result-container {
+    text-align: right;
+}
+
+#testForm {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/*
+#result-summary {
+
+}
+*/
