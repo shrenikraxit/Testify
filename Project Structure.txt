@@ -1,0 +1,16 @@
+app_setup/
+│
+├── templates/
+│   └── index.html         # HTML for the main page
+│   └── dashboard.html     # HTML for the dashboard page
+│   └── setup.html         # HTML for the setup page
+│   └── practice.html      # HTML for the practice page
+|
+│
+├── static/
+│   └── styles.css         # CSS for custom styles for practice
+│   └── dashboard.css      # CSS for custom styles for dashboard
+│
+├── app.py                 # Flask application backend
+├── models.py              # SQLAlchemy models for the database
+└── setup_db.py            # Script to create and initialize the database

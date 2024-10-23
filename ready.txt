@@ -1,0 +1,8 @@
+pip install --q unstructured langchain
+pip install --q chromadb
+pip install --q langchain-text-splitters
+pip install --q langchain-community
+pip install --q openai 
+pip install --q tiktoken
+pip install -U python-dotenv
+
