@@ -1,4 +1,25 @@
+Homepage:
 <img width="800" alt="image" src="https://github.com/user-attachments/assets/e17cc961-c771-40b7-a60d-b9c7604df0e8">
+
+Library:
+<img width="1728" alt="image" src="https://github.com/user-attachments/assets/e6266f9b-796d-4996-9684-d126d6f69026">
+
+Upload study materials:
+<img width="1561" alt="image" src="https://github.com/user-attachments/assets/6c2304c0-9ffb-4cac-aece-700539095a37">
+
+Create test:
+<img width="1338" alt="image" src="https://github.com/user-attachments/assets/d0ca7149-9e13-4b92-b5b3-e4f554bbc272">
+
+Test: 
+<img width="1717" alt="image" src="https://github.com/user-attachments/assets/a8bd6891-59ac-4d66-8f92-96e8aba2326d">
+
+Test grading with AI checking written response questions:
+<img width="1721" alt="image" src="https://github.com/user-attachments/assets/976d6331-9d1f-42fc-8171-82227f9e63e3">
+
+Performance Dashboard:
+<img width="1709" alt="image" src="https://github.com/user-attachments/assets/abb41707-a1b4-46b6-a808-5bb3f7f2f644">
+
+
 
 Testify delivers an engaging user experience built with HTML5, JavaScript/jquery, CSS, Bootstrap and font awesome libraries; 
 Supported by Python, Flask and SQLLite in the backend. 
